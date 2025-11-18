@@ -1,0 +1,17 @@
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\bin\Debug\net8.0\TaskManagement.Infrasturcture.deps.json
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\bin\Debug\net8.0\TaskManagement.Infrasturcture.runtimeconfig.json
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\bin\Debug\net8.0\TaskManagement.Infrasturcture.dll
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\bin\Debug\net8.0\TaskManagement.Infrasturcture.pdb
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\bin\Debug\net8.0\TaskManagement.Domain.dll
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\bin\Debug\net8.0\TaskManagement.Domain.pdb
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\TaskManagement.Infrasturcture.csproj.AssemblyReference.cache
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\TaskManagement.Infrasturcture.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\TaskManagement.Infrasturcture.AssemblyInfoInputs.cache
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\TaskManagement.Infrasturcture.AssemblyInfo.cs
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\TaskManagement.Infrasturcture.csproj.CoreCompileInputs.cache
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\TaskMana.3010A85F.Up2Date
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\TaskManagement.Infrasturcture.dll
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\refint\TaskManagement.Infrasturcture.dll
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\TaskManagement.Infrasturcture.pdb
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\TaskManagement.Infrasturcture.genruntimeconfig.cache
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\ref\TaskManagement.Infrasturcture.dll
