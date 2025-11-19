@@ -73,12 +73,6 @@ C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net
 C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\staticwebassets\msbuild.TaskManagement.API.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\staticwebassets\msbuild.TaskManagement.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\staticwebassets\msbuild.build.TaskManagement.API.props
-C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.TaskManagement.API.props
-C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TaskManagement.API.props
-C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\TaskMana.08BB0814.Up2Date
 C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\TaskManagement.API.dll
@@ -152,3 +146,8 @@ C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\bin\Debug\net
 C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.API\obj\Debug\net8.0\staticwebassets.build.json.cache
