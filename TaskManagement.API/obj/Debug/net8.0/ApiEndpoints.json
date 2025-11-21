@@ -1,7 +1,49 @@
 [
   {
+    "ContainingType": "TaskManagement.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "TaskManagement.Domain.DTOs.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagement.API.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "TaskManagement.Domain.DTOs.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagement.API.Controllers.AuthController",
+    "Method": "GetUsers",
+    "RelativePath": "api/Auth/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TaskManagement.API.Controllers.TaskManagementController",
-    "Method": "GetTasks",
+    "Method": "GetAllTasks",
     "RelativePath": "api/TaskManagement/tasks",
     "HttpMethod": "GET",
     "IsController": true,
@@ -19,7 +61,7 @@
     "Parameters": [
       {
         "Name": "taskItem",
-        "Type": "TaskManagement.API.DTOs.CreateTaskDto",
+        "Type": "TaskManagement.Domain.DTOs.CreateTaskDto",
         "IsRequired": true
       }
     ],
@@ -56,7 +98,7 @@
       },
       {
         "Name": "taskItemDto",
-        "Type": "TaskManagement.API.DTOs.CreateTaskDto",
+        "Type": "TaskManagement.Domain.DTOs.UpdateTaskDto",
         "IsRequired": true
       }
     ],
@@ -77,5 +119,26 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagement.API.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TaskManagement.API.WeatherForecast, TaskManagement.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
   }
 ]

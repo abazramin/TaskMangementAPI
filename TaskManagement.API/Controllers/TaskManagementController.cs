@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TaskManagement.Infrasturcture;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore; 
 using System.Linq;
-using TaskManagement.Domain;
-using TaskManagement.API.DTOs;
+using System.Threading.Tasks;
+using TaskManagement.Application;
+using TaskManagement.Domain.DTOs;
+using TaskManagement.Infrasturcture;
 
 namespace TaskManagement.API.Controllers
 {
@@ -13,78 +13,59 @@ namespace TaskManagement.API.Controllers
 	[ApiController]
 	public class TaskManagementController : ControllerBase
 	{
-		private AppDbContext _context;
-		public TaskManagementController(AppDbContext context)
+		private readonly ITaskService _tasks;
+
+		public TaskManagementController(ITaskService tasks)
 		{
-			_context = context;
+			_tasks = tasks;
 		}
 
+
 		[HttpGet("tasks")]
-		public async Task<IActionResult> GetTasks() // Fix: Change Tasks<> to Task<>
+		public async Task<IActionResult> GetAllTasks()
 		{
-			var tasks = await _context.TaskItems.ToListAsync(); // Fix: Use await and ToListAsync()
-			return Ok(tasks);
+			var result = await _tasks.GetAllTasks();
+			return Ok(result);
 		}
 
 		[HttpGet("tasks/{id}")]
 		public async Task<IActionResult> GetTaskById(int id)
 		{
-			var taskItem = await _context.TaskItems.FindAsync(id);
-			if (taskItem == null)
+			var result = await _tasks.GetTaskByIdAsync(id);
+			if (result == null)
 			{
 				return NotFound();
 			}
-			return Ok(taskItem);
+			return Ok(result);
 		}
 
-		[HttpPost("tasks")]
+		[HttpPost("tasks")]	
 		public async Task<IActionResult> CreateTask([FromBody] CreateTaskDto taskItem)
 		{
-			if(!ModelState.IsValid) return BadRequest(ModelState);
-
-			var task = new TaskItem
-			{
-				Title = taskItem.Title,
-				Description = taskItem.Description
-			};
-
-			_context.TaskItems.Add(task);
-			await _context.SaveChangesAsync(); 
-			return CreatedAtAction(nameof(GetTaskById), new { id = task.Id }, task);
+			var result = await _tasks.CreateTaskAsync(taskItem);
+			return Ok(result);
 		}
 
 		[HttpPut("tasks/{id}")]
-		public async Task<IActionResult> UpdateTask(int id, [FromBody] CreateTaskDto taskItemDto)
+		public async Task<IActionResult> UpdateTask(int id, [FromBody] UpdateTaskDto taskItemDto)
 		{
-			if (!ModelState.IsValid) return BadRequest(ModelState);
-
-			var taskItem = await _context.TaskItems.FindAsync(id);
-
-			if (taskItem == null)
+			var result = await _tasks.UpdateTaskAsync(id, taskItemDto);
+			if (result == null)
 			{
 				return NotFound();
 			}
-
-			taskItem.Title = taskItemDto.Title;
-			taskItem.Description = taskItemDto.Description;
-
-			await _context.SaveChangesAsync();
-			return Ok(taskItem);
+			return Ok(result);
 		}
 
 		[HttpDelete("tasks/{id}")]
 		public async Task<IActionResult> DeleteTask(int id)
 		{
-			var taskItem = await _context.TaskItems.FindAsync(id);
-			if (taskItem == null)
+			var taskItem = await _tasks.DeleteTaskAsync(id);
+			if (!taskItem)
 			{
 				return NotFound();
 			}
-			_context.TaskItems.Remove(taskItem);
-			await _context.SaveChangesAsync(); 
 			return NoContent();
 		}
-
-
 	}
 }

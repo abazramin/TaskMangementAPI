@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Crypto.Generators;
-using TaskManagement.API.DTOs;
 using TaskManagement.Application;
+using TaskManagement.Domain.DTOs;
 using TaskManagement.Domain;
 using TaskManagement.Infrasturcture;
 
@@ -21,6 +21,16 @@ namespace TaskManagement.API.Controllers
 			_context = context;
 			_jwt = jwt;
 		}
+
+		[HttpGet("Users")]
+		public async Task<IActionResult> GetUsers()
+		{
+			var users = await _context.Users
+				.Select(u => new { u.id, u.name, u.email, u.Role })
+				.ToListAsync();
+			return Ok(users);
+		}
+
 
 		[HttpPost("register")]
 		public async Task<IActionResult> Register(RegisterDto dto)

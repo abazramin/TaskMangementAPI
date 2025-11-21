@@ -15,3 +15,5 @@ C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\ob
 C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\TaskManagement.Infrasturcture.pdb
 C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\TaskManagement.Infrasturcture.genruntimeconfig.cache
 C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\obj\Debug\net8.0\ref\TaskManagement.Infrasturcture.dll
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\bin\Debug\net8.0\TaskManagement.Application.dll
+C:\Users\Abazr amin\source\repos\TaskManagement\TaskManagement.Infrasturcture\bin\Debug\net8.0\TaskManagement.Application.pdb

@@ -8,6 +8,6 @@ namespace TaskManagement.Domain.Enums
 {
 	public enum TaskStatus
 	{
-		New, InProgress, Completed, 
+		New = 1, InProgress = 2, Completed = 3, 
 	}
 }
