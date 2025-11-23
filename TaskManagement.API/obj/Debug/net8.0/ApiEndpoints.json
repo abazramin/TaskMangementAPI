@@ -43,6 +43,16 @@
   },
   {
     "ContainingType": "TaskManagement.API.Controllers.TaskManagementController",
+    "Method": "GetMyTasks",
+    "RelativePath": "api/TaskManagement/task",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskManagement.API.Controllers.TaskManagementController",
     "Method": "GetAllTasks",
     "RelativePath": "api/TaskManagement/tasks",
     "HttpMethod": "GET",
@@ -60,24 +70,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "taskItem",
+        "Name": "dto",
         "Type": "TaskManagement.Domain.DTOs.CreateTaskDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TaskManagement.API.Controllers.TaskManagementController",
-    "Method": "GetTaskById",
-    "RelativePath": "api/TaskManagement/tasks/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

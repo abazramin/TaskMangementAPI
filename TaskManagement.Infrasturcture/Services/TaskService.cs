@@ -19,7 +19,7 @@ namespace TaskManagement.Infrasturcture.Services
 		}
 
 
-		public async Task<List<TaskItem>> GetAllTasks()
+		public async Task<IEnumerable<TaskItem>> GetAllTasks()
 		{
 			return await _context.TaskItems.ToListAsync();
 		}
@@ -54,9 +54,12 @@ namespace TaskManagement.Infrasturcture.Services
 			return await _context.TaskItems.FindAsync(taskId);
 		}
 
-		public async Task<TaskItem?> UpdateTaskAsync(int taskId, UpdateTaskDto dto)
+		public async Task<TaskItem?> UpdateTaskAsync(int taskId, int userId , UpdateTaskDto dto)
 		{
 			var task = await _context.TaskItems.FirstOrDefaultAsync(x => x.Id == taskId);
+
+			if (task.AssignedToUserId != userId) return null;
+
 			if (task != null)
 			{
 				task.Title = dto.Title;

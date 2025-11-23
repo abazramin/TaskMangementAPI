@@ -1,16 +1,19 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore; 
-using System.Linq;
 using System.Threading.Tasks;
+using TaskManagement.API.Extensions;
 using TaskManagement.Application;
 using TaskManagement.Domain.DTOs;
 using TaskManagement.Infrasturcture;
 
 namespace TaskManagement.API.Controllers
 {
-	[Route("api/[controller]")]
+	[Authorize]
 	[ApiController]
+	[Route("api/[controller]")]
+
 	public class TaskManagementController : ControllerBase
 	{
 		private readonly ITaskService _tasks;
@@ -20,40 +23,51 @@ namespace TaskManagement.API.Controllers
 			_tasks = tasks;
 		}
 
-
+		[Authorize(Roles = "Admin")]
 		[HttpGet("tasks")]
 		public async Task<IActionResult> GetAllTasks()
 		{
+		
 			var result = await _tasks.GetAllTasks();
 			return Ok(result);
 		}
 
-		[HttpGet("tasks/{id}")]
-		public async Task<IActionResult> GetTaskById(int id)
+		[HttpGet("task")]
+		public async Task<IActionResult> GetMyTasks()
 		{
-			var result = await _tasks.GetTaskByIdAsync(id);
-			if (result == null)
-			{
-				return NotFound();
-			}
-			return Ok(result);
-		}
+			var userId = User.GetUserId();
+			var tasks = await _tasks.GetTaskByIdAsync(userId);
+			if (tasks == null) { return NotFound(); }
 
+			return Ok(tasks);
+		}
 		[HttpPost("tasks")]	
-		public async Task<IActionResult> CreateTask([FromBody] CreateTaskDto taskItem)
+		public async Task<IActionResult> CreateTask([FromBody] CreateTaskDto dto)
 		{
-			var result = await _tasks.CreateTaskAsync(taskItem);
+			var userId = User.GetUserId();
+			dto.AssignedToUserId = userId;
+			var result = await _tasks.CreateTaskAsync(dto);
 			return Ok(result);
 		}
 
 		[HttpPut("tasks/{id}")]
-		public async Task<IActionResult> UpdateTask(int id, [FromBody] UpdateTaskDto taskItemDto)
+		public async Task<IActionResult?> UpdateTask(int id,  [FromBody]  UpdateTaskDto taskItemDto)
 		{
-			var result = await _tasks.UpdateTaskAsync(id, taskItemDto);
+
+			var user_id = User.GetUserId();
+
+
+			var result = await _tasks.UpdateTaskAsync(id, user_id,taskItemDto);
+			
+
+			
+
 			if (result == null)
 			{
 				return NotFound();
 			}
+
+			
 			return Ok(result);
 		}
 

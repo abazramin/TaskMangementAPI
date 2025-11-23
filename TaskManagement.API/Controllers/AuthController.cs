@@ -49,8 +49,7 @@ namespace TaskManagement.API.Controllers
 				name = dto.Name,
 				email = dto.Email,
 				passwordHash = passwordHash,
-				Role = dto.Role,
-				
+				Role = dto.Role
 			};
 
 			_context.Users.Add(user);

@@ -11,10 +11,10 @@ namespace TaskManagement.Application
 {
 	public interface ITaskService
 	{
-		Task<List<TaskItem>> GetAllTasks();
+		Task<IEnumerable<TaskItem>> GetAllTasks();
 		Task<TaskItem> CreateTaskAsync(CreateTaskDto dto);
 		Task<TaskItem?> GetTaskByIdAsync(int taskId);
-		Task<TaskItem?> UpdateTaskAsync(int taskId, UpdateTaskDto dto);
+		Task<TaskItem?> UpdateTaskAsync(int taskId, int user_id ,UpdateTaskDto dto);
 		Task<bool> DeleteTaskAsync(int taskId);
 
 	}
